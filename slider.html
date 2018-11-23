@@ -10,7 +10,7 @@
   <div class="fs-slides">
     {% for slider_value in values %}
       <div class="fs-slide">
-        {{ slider_value }}
+        {{ slider_value | safe }}
       </div>
     {% endfor %}
   </div>
