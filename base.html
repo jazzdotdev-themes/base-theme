@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ SITENAME }}</title>
+  {% if TITLE %}
+    <title>{{ TITLE }}</title>
+  {% else %}
+    <title>{{ SITENAME }}</title>
+  {% endif %}
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/alexerlandsson/css-fadeshow/master/css/css-fadeshow.min.css">
@@ -49,6 +53,11 @@
         width: auto;
         height: 100%;
       }
+    }
+
+    .alt-name {
+      font-size: 75%;
+      color: gray;
     }
   </style>
   <style type="text/css">{% include 'fadeshow.css' %}</style>
