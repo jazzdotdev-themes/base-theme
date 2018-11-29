@@ -6,7 +6,10 @@
 
   <strong>Store:</strong> {{ store }} <br>
 
-  <a href="/?witness={{ id }}">Witness</a> <br>
+  <div>
+    <a href="/?witness={{ id }}">Witness</a>
+    <a href="/{{model}}/{{id}}/edit">Edit</a>
+  </div>
 
   <h3>Fields</h3>
   {% for key, value in fields %}

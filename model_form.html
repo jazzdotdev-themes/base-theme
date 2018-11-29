@@ -5,14 +5,17 @@
   <h1>{{ TITLE }}</h1>
   <form method="POST" action="/">
     <input type="hidden" name="model" value="{{model_name}}">
+    {% if id %}
+      <input type="hidden" name="id" value="{{id}}">
+    {% endif %}
     {% for name, field_def in model.fields %}
       <div>
         <label for="{{name}}">{{ name | capitalize }}</label>
-        <input type="string" name="fields.{{name}}" id="{{name}}">
+        <input type="string" name="fields.{{name}}" id="{{name}}" {% if fields %} value="{{fields[name]}}" {% endif %}>
       </div>
     {% endfor %}
     <div>
-      <textarea name="body"></textarea>
+      <textarea name="body">{% if body %}{{body}}{% endif %}</textarea>
     </div>
     <button type="submit">Create {{model_name}}</button>
   </form>
