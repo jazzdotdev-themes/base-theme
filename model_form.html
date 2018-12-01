@@ -1,23 +1,41 @@
 {% extends "base.html" %}
 
 {% block body %}
-
-  <h1>{{ TITLE }}</h1>
-  <form method="POST" action="/">
-    <input type="hidden" name="model" value="{{model_name}}">
-    {% if id %}
-      <input type="hidden" name="id" value="{{id}}">
-    {% endif %}
-    {% for name, field_def in model.fields %}
-      <div>
-        <label for="{{name}}">{{ name | capitalize }}</label>
-        <input type="string" name="fields.{{name}}" id="{{name}}" {% if fields %} value="{{fields[name]}}" {% endif %}>
+  <style type="text/css">
+    .content__body{
+        margin: 0 10% 0 10%;
+    }
+    
+  </style>
+  <div class="content-center flex mb-4 mt-4">
+    <div class="content__body rounded bg-white shadow-lg w-full overflow-hidden">
+      <div class="shadow-md bg-grey-lighter px-5 py-1">
+        <h1>{{ TITLE }}</h1>
+        
       </div>
-    {% endfor %}
-    <div>
-      <textarea name="body">{% if body %}{{body}}{% endif %}</textarea>
+      <div class="px-5 py-2">        
+        <form method="POST" action="/">
+          <input type="hidden" name="model" value="{{model_name}}">
+          {% if id %}
+            <input type="hidden" name="id" value="{{id}}">
+          {% endif %}
+          <div class="">
+            
+            {% for name, field_def in model.fields %}
+              <div class="py-1 px-4 flex flex-wrap max-w-full content-center align-middle">
+                <label class="py-2 px-2" for="{{name}}">{{ name | capitalize }}</label>
+                <input class="py-2 px-2 flex-grow flex-shrink bg-grey-lighter appearance-none border-2 border-grey-lighter rounded  text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-black focus:text-black" type="string" name="fields.{{name}}" id="{{name}}" {% if fields %} value="{{fields[name]}}" {% endif %}>
+              </div>
+            {% endfor %}
+          </div>
+          <div>
+            <textarea name="body">{% if body %}{{body}}{% endif %}</textarea>
+          </div>
+          <button class="inline-block text-black font-bold bg-green rounded-full py-2 px-4 hover:bg-green-dark hover:text-white" type="submit">Create {{model_name}}</button>
+        </form>    
+      </div>
+      
     </div>
-    <button type="submit">Create {{model_name}}</button>
-  </form>
+  </div>
 
 {% endblock %}
