@@ -24,7 +24,7 @@
       border-width: 1px;
       color:#FFF;
     }
-    .body__main{
+    .body__title{
       border-color: #CCC;
       border-width: 1px 0px 1px 0px;     
     }
@@ -39,18 +39,23 @@
       <div class="text-justify" >        
         <div class=" border-black px-5 py-2 shadow-inner">
           <h3>Fields</h3>
-          <div class="flex flex-wrap">
+          <div class="">
             {% for key, value in fields %}
-              <div class="px-3 py-1 w-2/4 flex-grow flex-shrink text-center rounded bg-black fields__inner">
-                <strong>{{ key | safe }}:</strong> {{ value | safe }}
-                <br>            
+              <div class="py-1 px-4 flex flex-wrap max-w-full content-center align-middle">
+                <label class="py-2 px-2" for="{{key}}">
+                  {{ key | safe | capitalize }}:
+                </label>               
+                <label class="py-2 px-2 flex-grow flex-shrink bg-grey-lighter appearance-none border-2 border-grey-lighter rounded  text-grey-darker leading-tight" for="{{key}}" id="{{key}}">
+                  {{ value | safe }}                                    
+                </label>
+                                   
               </div>
             {% endfor %}                      
           </div>
         </div>
-        <div class="px-5 py-1 body__main">
-          <h3>Body</h3>
-          <div id="content" class="container"><pre>{{ body | safe }}</pre></div>
+        <div class="">
+          <h3 class="body__title px-5 py-1">Body</h3>
+          <div id="content" class="container px-5 py-1"><pre>{{ body | safe }}</pre></div>
 
           {% if subdocuments %}
             <h3>Subdocuments</h3>
