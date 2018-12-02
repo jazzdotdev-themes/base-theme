@@ -4,16 +4,18 @@
 {% block body %}
 
   <!--Hero-->
-  <div class="w-full v-height text-black text-center">
+  <div class="w-full h-screen text-black text-center">
     {{ slider::slider(values=slides) }}
   </div>
   
 
   <!--Container-->
   <div class="site-map">
-    <div class="container mx-auto pt-24 md:pt-16 px-6 pb-8">
-      <p class="font-bold text-center  text-2xl md:text-4xl px-3 mb-5 ">Tailwind Starter Templates - Hero Product</p>
-      <p class="text-center">This starter template contains:</p>
+    <div class="container mx-auto pt-24 md:pt-16 px-6">
+      <p class="font-bold text-center  text-2xl md:text-4xl px-3 mb-5 sm:mb-16">Tailwind Starter Templates - Hero Product</p>
+      <p class="py-4"><i class="em em-wave"></i> <i class="em em-world_map"></i></p>
+      <p class="">This starter template contains:</p>
+      <p class="pt-4"></p>
       
       <div class="flex items-center pt-2">
         <svg class="flex-none m-2 h-6 fill-current text-green-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -27,26 +29,13 @@
         </svg>
         <span class="flex-1 py-1 pl-3 m-1">Nav List which wraps onto the next row for small screens</span>
       </div>
-      <div class="flex items-center ">
+      <div class="flex items-center">
         <svg class="flex-none m-2 h-6 fill-current text-green-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
           <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z" />
         </svg>
-        <span class="flex-1 py-1 pl-3 m-1 ">Hero section - two columns for large screens and two rows for small screens</span>
+        <span class="flex-1 py-1 pl-3 m-1">Hero section - two columns for large screens and two rows for small screens</span>
       </div>
-
-      <div class="discordModal" id="discordModal">
-          <a class="button" href="#popup1">Join our Discord</a>
-
-        <div id="popup1" class="overlay">
-          <div class="popup">
-            <h2>Connect our discord channel now!</h2>
-            <a class="close" href="#discordModal">&times;</a>
-            <div class="content">
-              <iframe src="https://discordapp.com/widget?id=518770164985233428&theme=dark" height="300" allowtransparency="true" frameborder="0"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
+    
     </div>
     
   </div>
