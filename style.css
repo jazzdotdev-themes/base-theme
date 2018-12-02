@@ -11,6 +11,9 @@ nav {
     border-bottom: none !important; }
 .w-full .sitename {
   color: #a99977; }
+  .w-full .sitename img {
+    width: 27px;
+    vertical-align: middle; }
 .w-full a {
   color: #91805c;
   font-family: Helvetica;
@@ -55,8 +58,85 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 93.4%;
+  height: 100%;
   border-bottom: 2px solid #9a7c58; }
+
+.v-height {
+  height: 93vh; }
+
+@keyframes fadeUpIn {
+  0% {
+    opacity: 0;
+    bottom: -30%; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    bottom: -30%; } }
+.discordModal {
+  display: flex;
+  justify-content: flex-end; }
+  .discordModal .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out; }
+    .discordModal .button:hover {
+      background: #06D85F; }
+  .discordModal .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0; }
+    .discordModal .overlay:target {
+      animation: fadeUpIn 1s;
+      -webkit-animation: fadeUpIn 1s;
+      visibility: visible;
+      opacity: 1; }
+  .discordModal .popup {
+    border: 1px solid #5a5a5a;
+    margin: 70px auto;
+    background: #8d8d8d;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    position: absolute;
+    right: 1%;
+    bottom: 8%; }
+    .discordModal .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif; }
+  .discordModal .close {
+    position: absolute;
+    top: -5px;
+    right: 7px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; }
+    .discordModal .close:hover {
+      color: #06D85F; }
+    .discordModal .close:target {
+      animation: fadeOut 1s;
+      -webkit-animation: fadeOut 1s; }
+  .discordModal .content {
+    max-height: 30%;
+    overflow: auto; }
+    .discordModal .content iframe {
+      width: 100%; }
 
 @media (max-aspect-ratio: 3 / 2) {
   .slide-img {
