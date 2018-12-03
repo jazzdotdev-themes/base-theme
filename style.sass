@@ -1,3 +1,73 @@
+body
+ background-color: #323134
+
+nav
+ background-color: #111111
+ border-bottom: 2px solid #9a7c58
+
+//!!!!!!!!!navbar
+.w-full
+  .no-b
+    margin-left: 0!important
+    &:hover
+      border-bottom: none!important
+  .sitename
+    color: #a99977
+    img
+      width: 27px
+      vertical-align: middle
+  .link-list
+  a
+    color: darken(#a99977, 10%)
+    font-family: Helvetica
+    margin-left: 30px
+    &:hover
+      border-bottom: 2px solid #a99977
+      color: lighten(#a99977, 10%)
+      padding-bottom: 0!important
+
+.site-map
+ border-top: 1px solid #5c5c5c
+ background-color: #252525
+ color: #8d8d8d
+
+.footer
+  background-color: black
+  color: #8d8d8d
+  .sitename
+    color: #464646
+
+
+.slide-content
+  position: absolute
+  top: 10%
+  left: 10%
+  font-size: 4rem
+  font-family: proxima-nova,Helvetica,Arial,sans-serif
+  color: white
+  text-shadow: 1px 1px 6px black
+  padding-bottom: 30px
+  border-bottom: 3px solid #9a7c58
+
+.slide-img
+  width: 100%
+  height: 100%
+
+.alt-name
+ font-size: 75%
+ color: gray
+
+[data-fadeshow] .fs-slide, [data-fadeshow] .fs-slide-bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  border-bottom: 2px solid #9a7c58
+
+.v-height
+  height: 93vh
+
 //!11111!!!!!!!1111!!!!!!!1111!!!!!!!1111!!!!!!!1111!!!!!!!!discrod-modal
 @keyframes fadeUpIn
   0%
@@ -87,3 +157,7 @@
 
 
 
+@media (max-aspect-ratio: 3/2)
+ .slide-img
+   width: 100%
+   height: 100%
