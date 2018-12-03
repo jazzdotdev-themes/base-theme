@@ -28,6 +28,12 @@
       border-color: #CCC;
       border-width: 1px 0px 1px 0px;     
     }
+    .col__2{
+      width: 20%;
+    }
+    .col__10{
+      width: 80%;
+    }
     
   </style>
   <div class=" content-center flex mb-4 mt-4">
@@ -39,17 +45,19 @@
       <div class="text-justify" >        
         <div class=" border-black px-5 py-2 shadow-inner">
           <h3>Fields</h3>
-          <div class="">
+          <div class="py-1 px-4 flex flex-wrap content-center align-middle flex-col">
             {% for key, value in fields %}
-              <div class="py-1 px-4 flex flex-wrap max-w-full content-center align-middle">
-                <label class="py-2 px-2" for="{{key}}">
-                  {{ key | safe | capitalize }}:
-                </label>               
-                <label class="py-2 px-2 flex-grow flex-shrink rounded text-grey-darker leading-tight" for="{{key}}" id="{{key}}">
-                  {{ value | safe }}                                    
-                </label>
+            <div class="py-1 w-full flex flex-wrap flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
+              <label class="w-1/4 py-2 px-2 " for="{{key}}">
+                {{ key | safe | capitalize }}:
+              </label>               
+              <label class="w-3/4 py-2 px-2 rounded text-grey-darker leading-tight " for="{{key}}" id="{{key}}">
+                {{ value | safe }}                                    
+              </label>
+              
+            </div>
                                    
-              </div>
+              
             {% endfor %}                      
           </div>
         </div>
