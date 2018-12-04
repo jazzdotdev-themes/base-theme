@@ -40,8 +40,28 @@
           <li class="list__border px-1">
             {% set url = "/" ~ model ~ "/" ~ entry.uuid %}
             {% if entry.name %}
-              <a href="{{url}}"></a>
-              <span class="alt-name">{{entry.store}} : {{entry.uuid}}</span>
+              <div class="flex flex-col px-2 py-2">
+                <div class="flex flex-row">
+                  <p class="pr-2">
+                    Store 
+                    <p class="font-bold pr-1">
+                      {{entry.store}} :                  
+                    </p>                  
+                  </p>
+                </div>
+                <div class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+                  <div class="w-4/5">
+                    <h3 > 
+                      {{entry.uuid}}
+                    </h3>                    
+                  </div>
+                  <div class="w-1/5">
+                    <a class=" ml-5 inline-block text-black link__main font-bold bg-blue rounded-full py-2 px-4 hover:bg-blue-dark hover:text-white" href="{{url}}">
+                      Show
+                    </a>                                    
+                  </div>
+                </div>                
+              </div>
             {% else %}
               <div class="flex flex-col px-2 py-2">
                 <div class="flex flex-row">
@@ -72,7 +92,9 @@
         {% endfor %}
       </ul>
       {% else %}
-      No documents
+      <h2>
+        No documents
+      </h2>      
       {% endif %}
 
       <div class="px-2 py-2 text-center">
