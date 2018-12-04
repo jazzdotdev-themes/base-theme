@@ -1,0 +1,51 @@
+<style type="text/css">
+	.chat__main{
+		border-width: 1;
+    border-color: #CCC;
+    height: auto;
+
+	}
+	.image__size{
+		width: auto;
+		height: 40px;
+	}
+	.chat__box{
+		overflow: scroll;
+		height: 20em;
+
+	}
+	.chat__head__el{
+		width: 45%;
+	}
+	.chat__message{
+		height: auto;
+		width: auto;
+	}
+
+
+</style>		
+<div id="chat-main" class="chat__main rounded w-full align-middle bg-white shadow-lg overflow-hidden px-4 py-4">
+	<div id="chat-header" class="px-1 py-1 flex flex-wrap align-middle justify-between">
+		
+		<img class="inline-block image__size rounded-full sm:mb-0 sm:mr-4 sm:ml-0 pin-l" src="https://image.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg" alt="User">
+		<h3 class="inline-block" >Username</h3>
+		<p class="inline-block">Date: mm/dd/YY </p>			
+		
+	</div>
+	<div class="chat__box border-2 border-black flex rounded flex-wrap block px-4 py-4">
+		<p class="chat__message flex-shrink border-grey border-2 rounded mb-2 ml-5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt facilis vero voluptate sunt nulla saepe dolorum aliquid porro eveniet, quos excepturi fuga nesciunt, voluptas? Maxime molestiae veritatis, corporis doloribus saepe?
+		</p>
+		<p class="chat__message flex-shrink border-grey border-2 rounded mb-2 mr-5">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt facilis vero voluptate sunt nulla saepe dolorum aliquid porro eveniet, quos excepturi fuga nesciunt, voluptas? Maxime molestiae veritatis, corporis doloribus saepe?
+		</p>
+	</div>
+	
+	<div class="mt-5 align-middle flex flex-wrap ">
+		
+		<textarea class="w-3/4 inline-block g-grey-lighter appearance-none border-2 border-grey rounded  text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-black focus:text-black" name="message" id="message" ></textarea>
+	
+		<button class="w-1/4 inline-block pin-t text-black font-bold bg-green rounded-r py-2 px-4 hover:bg-green-dark hover:text-white ">Send</button>
+	
+	</div>
+</div>
