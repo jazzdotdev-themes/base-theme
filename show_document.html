@@ -1,38 +1,6 @@
 {% extends "base.html" %}
 
 {% block body %}
-  <style type="text/css">    
-    .content__body{
-      margin: 0 10% 0 10%;
-    }
-
-
-    .link__main{
-      text-decoration: none;
-      
-    }
-
-    .link__main:hover{
-      text-decoration: none;
-    }
-    .link__main:visited{
-      text-decoration: none;
-    }
-    
-    .fields__inner{
-      border-color: #FFF;
-      border-width: 1px;
-      color:#FFF;
-    }
-    .body__title{
-      border-color: #CCC;
-      border-width: 1px 0px 1px 0px;     
-    }    
-    .list__main{
-      list-style: none;
-    }
-    
-  </style>
   <div class=" content-center flex mb-4 mt-4">
     <div class="content__body rounded bg-white shadow-lg w-full overflow-hidden">
       <div class="shadow-md bg-grey-lighter px-5 py-1">        
@@ -51,7 +19,9 @@
               <label class="w-3/4 py-2 px-2 rounded text-grey-darker leading-tight " for="{{key}}" id="{{key}}">
                 {{ value | safe }}                                    
               </label>
-              
+              <!-- {% if parentDocuments %}
+                <a href="/{{key}}/{{value}}"> TEST {{ model | safe }}</a>
+              {% endif %} -->
             </div>
                                    
               
