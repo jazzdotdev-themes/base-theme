@@ -1,7 +1,7 @@
 <div class="">
-	<div id="chat-main" class="animated fadeInUp chat__main rounded align-middle bg-white shadow-lg px-4 py-4 ml-3 mb-3 mr-3">
+	<div id="chat-main" class="text-sm chat__main rounded align-middle bg-white shadow-lg px-4 py-4 ml-3 mb-3 mr-3 invisible">
 		<div id="chat-header" class="chat__header">
-			
+			Logo foundt-patterns
 		</div>
 
 		<div id="chat-user-header" class="px-1 py-1 flex flex-wrap align-middle justify-between">
@@ -26,8 +26,8 @@
 				
 		</div>
 	</div>	
-	<div id="chat-toggle" class="chat__show_button mb-3 mr-3 " >
-		<button onclick="showChat()" class="mr-auto chat__show_button text-black link__main font-bold bg-blue rounded-full py-2 px-4 hover:bg-blue-dark hover:text-white "> 
+	<div id="chat-toggle" class="chat__button mb-3 mr-3 w-full" >
+		<button onclick="showChat()" class=" chat__button_show mr-auto text-black link__main font-bold bg-blue rounded-full py-2 px-4 hover:bg-blue-dark hover:text-white "> 
 			Chat with us
 		</button>
 	</div>
@@ -37,11 +37,19 @@
 <script type="text/javascript">
 	function showChat() {
 		chat = document.getElementById("chat-main")
-		class_name = "visible"
-		// body...
-	}
-	for (var i = 0; i < arr.length; i++) {
-		arr[i]
+
+		class_name = "visible animated fadeInUp"
+		class_remove = "invisible"
+		
+		array = chat.className.split(" ");		
+		here = array.indexOf(class_remove);		
+		array.splice(here,1);
+		classes = ""
+		for (var i = 0; i < array.length; i++) {
+			classes += " "+ array[i]
+		}
+		
+
 	}
 
 </script>

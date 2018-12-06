@@ -23,9 +23,9 @@
   .chat__main .chat__message {
     height: auto;
     width: auto; }
-  .chat__main .chat__show_button {
-    right: 0;
-    bottom: 0; }
+
+.chat__button .chat__button_show {
+  margin-left: 60%; }
 
 .content__body {
   margin: 0 10% 0 10%; }
