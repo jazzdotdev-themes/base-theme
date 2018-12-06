@@ -35,7 +35,11 @@
 </div>
 
 <script type="text/javascript">
+	var chat_centinel=0;
 	function showChat() {
+		if (true) {
+			
+		}
 		chat = document.getElementById("chat-main")
 
 		class_name = "visible animated fadeInUp"
@@ -48,8 +52,8 @@
 		for (var i = 0; i < array.length; i++) {
 			classes += " "+ array[i]
 		}
-		
-
+		classes += " "+class_name
+		chat.className = classes
 	}
 
 </script>
