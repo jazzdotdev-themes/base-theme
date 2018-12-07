@@ -6,22 +6,42 @@
 	height: auto
 	width: auto
 
-.chat__main
+
+.chat__main	
 	@extend .animated
 	@extend .fadeOutDown
-	display: none
+	animation-delay: 0.5s
+	animation-duration: 1s
+
 	border-width: 1
 	z-index: 1
+
+	transition: visibility 2s linear
+	visibility: hidden	
 	position: fixed	
 	right: 0
 	bottom: 0	
 	border-color: #CCC
 	height: auto
 	width: 20em
+
+
 	
 
-	&:hover
+	&:hover , &:focus
+		@extend .animated
+		@extend .fadeInUp 	
+		visibility: visible
 		display: block
+		.chat__message , .new__message	
+			@extend .animated
+			@extend .fadeInUp 
+	
+	.chat__message		
+		border-width: 0px 0px 1px 0px		
+		border-bottom-color: #000
+		height: auto
+		width: auto
 
 	.image__size
 		width: auto
@@ -35,11 +55,6 @@
 		overflow-y: scroll
 		height: 20em
 
-	.chat__message		
-		border-width: 0px 0px 1px 0px		
-		border-bottom-color: #000
-		height: auto
-		width: auto
 
 	.new__message
 		.line
@@ -49,16 +64,25 @@
 
 
 .chat__button
+	@extend .animated
+	@extend .fadeInUp 
 	cursor: pointer
 	position: fixed
+	transition: visibility 1.5s linear
 	right: 1em
 	bottom: 5px
 	
-
+	
 	&:focus
+		@extend .animated
+		@extend .fadeOutDown
+		animation-delay: 0s
+		animation-duration: 0.2s
+
 		+ .chat__main
 			@extend .animated
 			@extend .fadeInUp 
+			visibility: visible
 			display: block
 
 
