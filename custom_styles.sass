@@ -1,36 +1,49 @@
-.above_chat
-	z-index : 1
+%reset_container
+	margin: 0
+	padding: 0
+	height: auto
+	width: auto
+
+.container__chat
+	@extend %reset_container
 	position: fixed
 	right: 0
 	bottom: 0
 
 .chat__main
+
 	border-width: 1
 	border-color: #CCC
-	left: 0
-	bottom: 0
-	z-index : 2	
 	height: auto
-	width: 25em
+	width: 20em
 
 	.image__size
 		width: auto
 		height: 40px
 
+	.user__image__size
+		width: auto
+		height: 30px
+
 	.chat__box
-		overflow: scroll
+		overflow-y: scroll
 		height: 20em
 
-	.chat__head__el
-		width: 45%
-
 	.chat__message
+		
+		border-width: 1
+		border-bottom: 1
+		border-bottom-color: #666666
 		height: auto
 		width: auto
-
+	.new__message
+		
+		.line
+			border-width: 1
+			border-top: 1
+			
 .chat__button
-	.chat__button_show
-		margin-left: 60%
+	margin-left: 50%
 
 .content__body
 	margin: 0 10% 0 10%

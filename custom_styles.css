@@ -1,5 +1,10 @@
-.above_chat {
-  z-index: 1;
+.container__chat {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto; }
+
+.container__chat {
   position: fixed;
   right: 0;
   bottom: 0; }
@@ -7,25 +12,26 @@
 .chat__main {
   border-width: 1;
   border-color: #CCC;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
   height: auto;
-  width: 25em; }
+  width: 20em; }
   .chat__main .image__size {
     width: auto;
     height: 40px; }
+  .chat__main .user__image__size {
+    width: auto;
+    height: 30px; }
   .chat__main .chat__box {
-    overflow: scroll;
+    overflow-y: scroll;
     height: 20em; }
-  .chat__main .chat__head__el {
-    width: 45%; }
   .chat__main .chat__message {
+    border-width: 1;
+    border-bottom: 1;
+    border-bottom-color: #666666;
     height: auto;
     width: auto; }
 
-.chat__button .chat__button_show {
-  margin-left: 60%; }
+.chat__button {
+  margin-left: 50%; }
 
 .content__body {
   margin: 0 10% 0 10%; }
