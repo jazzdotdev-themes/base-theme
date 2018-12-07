@@ -1,21 +1,27 @@
+@import './animate.scss'
+
 %reset_container
 	margin: 0
 	padding: 0
 	height: auto
 	width: auto
 
-.container__chat
-	@extend %reset_container
-	position: fixed
-	right: 0
-	bottom: 0
-
 .chat__main
-
+	@extend .animated
+	@extend .fadeOutDown
+	display: none
 	border-width: 1
+	z-index: 1
+	position: fixed	
+	right: 0
+	bottom: 0	
 	border-color: #CCC
 	height: auto
 	width: 20em
+	
+
+	&:hover
+		display: block
 
 	.image__size
 		width: auto
@@ -43,7 +49,19 @@
 
 
 .chat__button
-	margin-left: 50%
+	cursor: pointer
+	position: fixed
+	right: 1em
+	bottom: 5px
+	
+
+	&:focus
+		+ .chat__main
+			@extend .animated
+			@extend .fadeInUp 
+			display: block
+
+
 
 .content__body
 	margin: 0 10% 0 10%
@@ -51,12 +69,11 @@
 .link__main
 	text-decoration: none
 
-	hover:
+	&:hover
 		text-decoration: none
 
-	visited:
+	&:visited
 		text-decoration: none
-
 
 .fields__inner
 	border-color: #FFF

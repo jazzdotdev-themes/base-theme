@@ -63,7 +63,7 @@
   </style>
   
   <style type="text/css">{% include 'fadeshow.css' %}</style>
-  <style type="text/css">{% include 'animate.css' %}</style>
+  <style type="text/css">{% include 'animate.min.css' %}</style>
   
   <style type="text/css">{% include 'custom_styles.css' %}</style>
 
@@ -75,10 +75,8 @@
 
   {% block body %}
   {% endblock %}
-  <div class="container__chat">    
-    {% include 'chat.html' %}
-  </div>
-
+  {% include 'chat.html' %} 
+  
   {% include 'footer.html' %}
 
 </body>
