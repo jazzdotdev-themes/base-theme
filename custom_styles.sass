@@ -56,6 +56,10 @@
 		@extend .doNothing
 		visibility: visible
 		display: block
+		.chat__message , .new__message
+			visibility: visible
+			@extend .animated
+			@extend .fadeInUp 
 
 	&:focus
 		visibility: visible
