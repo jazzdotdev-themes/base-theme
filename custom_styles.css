@@ -1053,7 +1053,7 @@
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-.fadeInUp, .chat__button, .chat__button:focus ~ #chat-main {
+.fadeInUp, .chat__button, .chat__button:focus ~ .chat__main {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp; }
 
@@ -1107,7 +1107,7 @@
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0); } }
-.fadeOutDown, #chat-main .close__button:focus ~ .chat__main, .chat__button:focus {
+.fadeOutDown, .chat__button:focus {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown; }
 
@@ -1289,7 +1289,7 @@
     transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in; } }
-.animated.flip, .flip#chat-main, #chat-main .close__button:focus ~ .flip.chat__main, .flip.chat__button, .chat__button:focus ~ .flip#chat-main {
+.animated.flip, .flip.chat__main, .flip.chat__button, .chat__button:focus ~ .flip.chat__main {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2375,59 +2375,59 @@
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
-.animated, #chat-main, #chat-main:focus, #chat-main .close__button:focus ~ .chat__main, .chat__button, .chat__button:focus, .chat__button:focus ~ #chat-main {
+.animated, .chat__main, .chat__main:focus, .chat__button, .chat__button:focus, .chat__button:focus ~ .chat__main {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animated.infinite, .infinite#chat-main, #chat-main .close__button:focus ~ .infinite.chat__main, .infinite.chat__button, .chat__button:focus ~ .infinite#chat-main {
+.animated.infinite, .infinite.chat__main, .infinite.chat__button, .chat__button:focus ~ .infinite.chat__main {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
-.animated.delay-1s, .delay-1s#chat-main, #chat-main .close__button:focus ~ .delay-1s.chat__main, .delay-1s.chat__button, .chat__button:focus ~ .delay-1s#chat-main {
+.animated.delay-1s, .delay-1s.chat__main, .delay-1s.chat__button, .chat__button:focus ~ .delay-1s.chat__main {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-.animated.delay-2s, .delay-2s#chat-main, #chat-main .close__button:focus ~ .delay-2s.chat__main, .delay-2s.chat__button, .chat__button:focus ~ .delay-2s#chat-main {
+.animated.delay-2s, .delay-2s.chat__main, .delay-2s.chat__button, .chat__button:focus ~ .delay-2s.chat__main {
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
 
-.animated.delay-3s, .delay-3s#chat-main, #chat-main .close__button:focus ~ .delay-3s.chat__main, .delay-3s.chat__button, .chat__button:focus ~ .delay-3s#chat-main {
+.animated.delay-3s, .delay-3s.chat__main, .delay-3s.chat__button, .chat__button:focus ~ .delay-3s.chat__main {
   -webkit-animation-delay: 3s;
   animation-delay: 3s; }
 
-.animated.delay-4s, .delay-4s#chat-main, #chat-main .close__button:focus ~ .delay-4s.chat__main, .delay-4s.chat__button, .chat__button:focus ~ .delay-4s#chat-main {
+.animated.delay-4s, .delay-4s.chat__main, .delay-4s.chat__button, .chat__button:focus ~ .delay-4s.chat__main {
   -webkit-animation-delay: 4s;
   animation-delay: 4s; }
 
-.animated.delay-5s, .delay-5s#chat-main, #chat-main .close__button:focus ~ .delay-5s.chat__main, .delay-5s.chat__button, .chat__button:focus ~ .delay-5s#chat-main {
+.animated.delay-5s, .delay-5s.chat__main, .delay-5s.chat__button, .chat__button:focus ~ .delay-5s.chat__main {
   -webkit-animation-delay: 5s;
   animation-delay: 5s; }
 
-.animated.fast, .fast#chat-main, #chat-main .close__button:focus ~ .fast.chat__main, .fast.chat__button, .chat__button:focus ~ .fast#chat-main {
+.animated.fast, .fast.chat__main, .fast.chat__button, .chat__button:focus ~ .fast.chat__main {
   -webkit-animation-duration: 800ms;
   animation-duration: 800ms; }
 
-.animated.faster, .faster#chat-main, #chat-main .close__button:focus ~ .faster.chat__main, .faster.chat__button, .chat__button:focus ~ .faster#chat-main {
+.animated.faster, .faster.chat__main, .faster.chat__button, .chat__button:focus ~ .faster.chat__main {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms; }
 
-.animated.slow, .slow#chat-main, #chat-main .close__button:focus ~ .slow.chat__main, .slow.chat__button, .chat__button:focus ~ .slow#chat-main {
+.animated.slow, .slow.chat__main, .slow.chat__button, .chat__button:focus ~ .slow.chat__main {
   -webkit-animation-duration: 2s;
   animation-duration: 2s; }
 
-.animated.slower, .slower#chat-main, #chat-main .close__button:focus ~ .slower.chat__main, .slower.chat__button, .chat__button:focus ~ .slower#chat-main {
+.animated.slower, .slower.chat__main, .slower.chat__button, .chat__button:focus ~ .slower.chat__main {
   -webkit-animation-duration: 3s;
   animation-duration: 3s; }
 
 @media (prefers-reduced-motion) {
-  .animated, #chat-main, #chat-main:focus, #chat-main .close__button:focus ~ .chat__main, .chat__button, .chat__button:focus, .chat__button:focus ~ #chat-main {
+  .animated, .chat__main, .chat__main:focus, .chat__button, .chat__button:focus, .chat__button:focus ~ .chat__main {
     -webkit-animation: unset !important;
     animation: unset !important;
     -webkit-transition: none !important;
     transition: none !important; } }
-#chat-main {
+.chat__main {
   animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
   animation-duration: 1s;
@@ -2436,41 +2436,36 @@
   z-index: 3;
   transition: visibility 2000s;
   -webkit-transition: visibility 2000s;
-  visibility: hidden;
   position: fixed;
-  right: 0.1em;
-  bottom: 0.1em;
+  right: 1em;
+  bottom: 1em;
   border-color: #CCC;
   height: auto;
-  width: 30em; }
-  #chat-main:focus {
+  width: 30em;
+  visibility: hidden; }
+  .chat__main:focus {
     box-shadow: 0;
     visibility: visible;
     display: block; }
-  #chat-main #chat-header {
+  .chat__main .chat__header {
     background-color: #80FF9C; }
-  #chat-main .close__button {
-    width: 15px;
-    height: auto; }
-    #chat-main .close__button:focus ~ .chat__main {
-      background-color: #FFac11;
-      transition: visibility 2s;
-      -webkit-transition: visibility 2s; }
-  #chat-main .chat__message {
+  .chat__main .close__button {
+    font-size: 2em; }
+  .chat__main .chat__message {
     border-width: 0px 0px 1px 0px;
     border-bottom-color: #000;
     height: auto;
     width: auto; }
-  #chat-main .image__size {
+  .chat__main .image__size {
     width: auto;
     height: 40px; }
-  #chat-main .user__image__size {
+  .chat__main .user__image__size {
     width: auto;
     height: 30px; }
-  #chat-main .chat__box {
+  .chat__main .chat__box {
     overflow-y: scroll;
     height: 20em; }
-  #chat-main .new__message .line {
+  .chat__main .new__message .line {
     border-width: 1px 0px 0px 0px;
     height: 50%;
     border-color: #CC0000; }
@@ -2493,7 +2488,7 @@
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-.doNothing, #chat-main:focus {
+.doNothing, .chat__main:focus {
   -webkit-animation-name: doNothing;
   animation-name: doNothing;
   animation-delay: 0s;
@@ -2509,13 +2504,14 @@
   transition: visibility 1.5s linear;
   right: 1em;
   bottom: 5px;
-  border-bottom-left-radius: 40%;
   border-top-left-radius: 40%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 40%;
   border-bottom-right-radius: 40%; }
   .chat__button:focus {
     animation-delay: 0s;
     animation-duration: 0.2s; }
-    .chat__button:focus ~ #chat-main {
+    .chat__button:focus ~ .chat__main {
       visibility: visible;
       display: block; }
 

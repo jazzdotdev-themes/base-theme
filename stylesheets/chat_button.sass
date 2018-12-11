@@ -6,8 +6,9 @@
 	transition: visibility 1.5s linear
 	right: 1em
 	bottom: 5px
-	border-bottom-left-radius: 40%
 	border-top-left-radius: 40%
+	border-top-right-radius: 5%
+	border-bottom-left-radius: 40%
 	border-bottom-right-radius: 40%
 	
 	
@@ -17,9 +18,9 @@
 		animation-delay: 0s
 		animation-duration: 0.2s
 
-		~ #chat-main
+		~ .chat__main
 			@extend .animated
 			@extend .fadeInUp 
-			
+
 			visibility: visible
 			display: block
