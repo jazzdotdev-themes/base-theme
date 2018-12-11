@@ -1,10 +1,12 @@
-.chat__main	
+#chat-main	
+	@extend .animated
 	animation-delay: 0.5s
-	animation-duration: 1s
 	-webkit-animation-delay: 0.5s
+	
+	animation-duration: 1s	
 	-webkit-animation-duration: 1s
 	border-width: 1
-	z-index: 1
+	z-index: 3
 	transition: visibility 2000s 
 	-webkit-transition: visibility 2000s
 	visibility: hidden	
@@ -15,16 +17,6 @@
 	height: auto
 	width: 30em
 
-	// &:hover
-	// 	@extend .animated
-	// 	@extend .doNothing
-	// 	visibility: visible
-	// 	display: block
-	// 	.chat__message , .new__message
-	// 		visibility: visible
-	// 		@extend .animated
-	// 		@extend .fadeInUp 
-
 	&:focus
 		box-shadow: 0
 		visibility: visible
@@ -33,14 +25,19 @@
 		@extend .animated
 		@extend .doNothing 	
 
-	.close__button
-		&:focus
-			background-color: #FFac11
-			transition: visibility 2s linear
-			-webkit-transition: visibility 2s
-			@extend .animated
-			@extend .fadeOutDown
+	#chat-header
+		background-color: #80FF9C
 
+	.close__button
+		width: 15px
+		height: auto
+		&:focus		
+			~ .chat__main
+				background-color: #FFac11
+				@extend .animated
+				@extend .fadeOutDown
+				transition: visibility 2s 
+				-webkit-transition: visibility 2s
 	.chat__message		
 		border-width: 0px 0px 1px 0px		
 		border-bottom-color: #000
@@ -63,4 +60,4 @@
 		.line
 			border-width: 1px 0px 0px 0px
 			height: 50%
-			border-color: #CC0000
+			border-color: #CC0000			
