@@ -1,12 +1,12 @@
 <div>	
-	<span id="show-chat" class=" delay-1s chat__button mr-auto text-white link__main font-bold bg-blue py-2 px-4 hover:bg-blue-dark hover:text-gray shadow-lg text-2xl" tabindex="1"> 
+	<span id="show-chat" class="chat__button mr-auto text-white link__main font-bold bg-blue py-2 px-4 hover:bg-blue-dark hover:text-gray shadow-lg text-2xl" tabindex="1"> 
 		<i class="mdi mdi-message-text-outline"></i>
 	</span>
 	<div id="chat-main" class="text-sm chat__main overflow-hidden rounded align-middle bg-white shadow-lg" chatwindow="true" tabindex="1">
 		<div id="chat-header" class="chat__header w-full flex flex-wrap px-3 py-3">
 			<div class="justify-between flex flex-row w-full">
 				<i class="mdi mdi-message-text-outline"></i>
-				<div id="hide-chat" class="close__button font-bold hover:text-grey" >
+				<div id="close-chat" class="close__button font-bold hover:text-grey" onfocus="document.getElementById('chat-main').style.visibility='hidden'" >
 					<i class="mdi mdi-close" tabindex="1" ></i>			
 				</div>
 				

@@ -2444,7 +2444,6 @@
   width: 30em;
   visibility: hidden; }
   .chat__main:focus {
-    box-shadow: 0;
     visibility: visible;
     display: block; }
   .chat__main .chat__header {
@@ -2490,13 +2489,7 @@
     transform: translate3d(0, 0, 0); } }
 .doNothing, .chat__main:focus {
   -webkit-animation-name: doNothing;
-  animation-name: doNothing;
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  animation-duration: 3000s;
-  -webkit-animation-duration: 3000s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
+  animation-name: doNothing; }
 
 .chat__button {
   cursor: pointer;
@@ -2504,6 +2497,7 @@
   transition: visibility 1.5s linear;
   right: 1em;
   bottom: 5px;
+  animation-delay: 1s;
   border-top-left-radius: 40%;
   border-top-right-radius: 5%;
   border-bottom-left-radius: 40%;
