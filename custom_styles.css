@@ -2446,8 +2446,6 @@
   .chat__main:focus {
     visibility: visible;
     display: block; }
-  .chat__main .chat__header {
-    background-color: #80FF9C; }
   .chat__main .close__button {
     font-size: 2em; }
   .chat__main .chat__message {
