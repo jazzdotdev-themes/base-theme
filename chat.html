@@ -3,7 +3,7 @@
 		<i class="mdi mdi-message-text-outline"></i>
 	</button>
 	<div id="chat-main" class="text-sm chat__main overflow-hidden rounded align-middle bg-white shadow-lg fadeOutDown" chatwindow="true" tabindex="1">
-		<div id="chat-header" class="bg-grey-darkest chat__header text-white w-full flex flex-wrap px-3 py-1">
+		<div id="chat-header" class="bg-grey-darkest text-white w-full flex flex-wrap px-3 py-1">
 			<div class="justify-between flex flex-row w-full">
 				<i class="mdi mdi-message-text text-2xl"></i>
 				<button id="close-chat" class="close__button font-bold hover:text-grey " onclick="document.getElementById('chat-main').classList.toggle('fadeOutDown');document.getElementById('show-chat').classList.toggle('fadeOutDown');" >
@@ -25,10 +25,24 @@
 			<div class="w-full text-center">
 			</div>									
 		</div>
-
-		<div class="chat__box flex flex-wrap block px-4 py-4">					
-					
-
+		<div id="chat-content"class="chat__box flex flex-wrap block ">
+			<div class="chat__message__1 w-full hover:bg-grey-light px-4 py-4 flex flex-row">
+				<img src="https://image.flaticon.com/icons/svg/189/189664.svg" class="image__size" alt="">
+				<div>
+					<h3>Message information</h3>
+					<h4>some text</h4>
+				</div>
+			</div>
+			<div class="chat__message__1 w-full hover:bg-grey-light px-4 py-4">
+				<img src="https://image.flaticon.com/icons/svg/189/189664.svg" class="image__size" alt="">
+			</div>
+			<div class="chat__message__1 w-full hover:bg-grey-light px-4 py-4">
+				<img src="https://image.flaticon.com/icons/svg/189/189664.svg" class="image__size" alt="">
+			</div>
+		</div>
+		<div id="chat-footer" class="w-full flex flex-row justify-center">
+			<p > CHAT </p>
+			<p> FAQ</p>
 		</div>
 	</div>
 
