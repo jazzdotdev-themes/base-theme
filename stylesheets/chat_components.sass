@@ -1,7 +1,5 @@
 .container__visible
 	@extend .animated
-	//@extend .fadeIn
-	//visibility: visible
 	transition: display 0.5s
 	-webkit-transition: display 0.5s
 	animation-delay: 0.5s
@@ -13,8 +11,6 @@
 	@extend .animated
 	transition: display 0.5s
 	-webkit-transition: display 0.5s
-	//@extend .fadeOut
-	//visibility: hidden
 	animation-delay: 0.5s
 	-webkit-animation-delay: 0.5s
 	display: none
@@ -28,7 +24,7 @@
 		width: 12em
 		height: 12em
 
-.center__bottom			
-	margin-top: 50%
-	margin-left: 50%
-	margin-right: 50%
+		&:hover
+			.alt_box_img
+				@extend .animated
+				@extend .pulse
