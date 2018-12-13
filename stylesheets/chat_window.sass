@@ -17,7 +17,7 @@
 	width: 27em
 	visibility: hidden	
 	
-	&:focus
+	&:focus,&:active
 		visibility: visible
 		display: block
 		@extend .animated
@@ -49,9 +49,11 @@
 		/* Track */
 		&::-webkit-scrollbar-track
 			background: #FFF 
+			border-radius: 15px
 		/* Handle */
 		&::-webkit-scrollbar-thumb
 			background: #DAE1E7
+			border-radius: 10px
 
 		/* Handle on hover */
 		&::-webkit-scrollbar-thumb:hover 
