@@ -1,5 +1,5 @@
 <div>	
-	<div class="aux__section" > </div>			
+	<div class="aux__section" onclick="document.getElementById('chat-main').classList.toggle('fadeOutDown');document.getElementById('show-chat').classList.toggle('fadeOutDown');"> </div>			
 	<button id="show-chat" class="chat__button mr-auto text-white link__main font-bold bg-blue py-2 px-4 hover:bg-blue-dark hover:text-gray shadow-lg text-2xl fadeInUp" onclick="document.getElementById('chat-main').classList.toggle('fadeOutDown');document.getElementById('show-chat').classList.toggle('fadeOutDown');"> 
 		<i class="mdi mdi-message-text-outline"></i>
 	</button>
@@ -62,9 +62,13 @@
 		</div>
 		<div id="chat-content-sec" class="chat__box flex flex-wrap container__hidden fadeOut">
 			<div class="flex flex-row">
-				<div class="chat__alt__boxes px-2 py-2 mx-2 my-2 w-1/2 align-middle text-center">
-					<img src="https://image.flaticon.com/icons/svg/138/138239.svg" class="image__size" alt="">
-					<p>Some Info</p>
+				<div class="chat__alt__boxes rounded-lg shadow hover:shadow-lg px-2 py-2 mx-2 my-2 w-1/2 align-middle text-center flex flex-wrap">
+					<div class=" w-full">
+						<img src="https://image.flaticon.com/icons/svg/138/138239.svg" class="image__size center__bottom flex" alt="">					
+					</div>
+					<p class="w-full">
+						Some Info
+					</p>
 				</div>
 				<div class="chat__alt__boxes px-2 py-2 mx-2 my-2 w-1/2 align-middle text-center">
 					<img src="https://image.flaticon.com/icons/svg/138/138239.svg" class="image__size" alt="">
