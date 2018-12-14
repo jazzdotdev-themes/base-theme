@@ -1,7 +1,27 @@
 <div id="chat-content-main"class="chat__box flex flex-wrap container__visible fadeIn">
 	<!-- Container -->
 
-	<div class="chat__main__boxes w-full hover:bg-grey-light px-4 py-4 flex flex-row flex-shrink overflow-hidden">
+	<div class="chat__main__boxes w-full hover:bg-grey-light px-4 py-4 flex flex-row flex-shrink overflow-hidden" onclick="
+	document.getElementById('chat-content-main').classList.remove('container__visible');
+	document.getElementById('chat-content-main').classList.add('container__hidden');
+	document.getElementById('chat-content-main').classList.remove('fadeIn');
+	document.getElementById('chat-content-main').classList.add('fadeOut');
+
+	document.getElementById('chat-section-1').classList.add('container__visible');
+	document.getElementById('chat-section-1').classList.remove('container__hidden');
+	document.getElementById('chat-section-1').classList.add('fadeIn');
+	document.getElementById('chat-section-1').classList.remove('fadeOut');
+
+	document.getElementById('chat-header').classList.remove('container__visible');
+	document.getElementById('chat-header').classList.add('container__hidden');
+	document.getElementById('chat-header').classList.remove('fadeIn');
+	document.getElementById('chat-header').classList.add('fadeOut');
+
+	document.getElementById('chat-header-sec-1').classList.add('container__visible');
+	document.getElementById('chat-header-sec-1').classList.remove('container__hidden');
+	document.getElementById('chat-header-sec-1').classList.add('fadeIn');
+	document.getElementById('chat-header-sec-1').classList.remove('fadeOut');
+	">
 		<!-- Element of container -->
 		<img src="https://image.flaticon.com/icons/svg/189/189664.svg" class="image__size" alt="">
 		<div class="px-2 ">
