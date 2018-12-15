@@ -1,3 +1,11 @@
+%element-hidden
+	@extend .container__hidden
+	@extend .fadeOut
+
+%element-visible
+	@extend .container__visible
+	@extend .fadeIn
+	
 .input__hidden
 	display: none
 	visibility: hidden
@@ -23,12 +31,10 @@
 		~ #chat-main 
 
 			#chat-content-main	
-				@extend .container__hidden
-				@extend .fadeOut
+				@extend %element-hidden
 
 			#chat-content-2
-				@extend .container__visible
-				@extend .fadeIn
+				@extend %element-visible
 
 #show-chat-section-1				
 	&:checked
@@ -36,23 +42,15 @@
 
 			#chat__header_bg
 				#chat-header
-					@extend .container__hidden
-					@extend .fadeOut
+					@extend %element-hidden
 				#chat-header-sec-1
-					@extend .container__visible
-					@extend .fadeIn
+					@extend %element-visible
 
-			#chat-content-2
-				@extend .container__hidden
-				@extend .fadeOut
-
-			#chat-content-main
-				@extend .container__hidden
-				@extend .fadeOut
+			#chat-content-2 , #chat-content-main
+				@extend %element-hidden
 
 			#chat-section-1
-				@extend .container__visible
-				@extend .fadeIn
+				@extend %element-visible
 
 #show-chat-section-2				
 	&:checked
@@ -60,21 +58,13 @@
 
 			#chat__header_bg
 				#chat-header
-					@extend .container__hidden
-					@extend .fadeOut
-					
+					@extend %element-hidden
+
 				#chat-header-sec-2
-					@extend .container__visible
-					@extend .fadeIn
+					@extend %element-visible
 
-			#chat-content-main
-				@extend .container__hidden
-				@extend .fadeOut
-
-			#chat-content-2
-				@extend .container__hidden
-				@extend .fadeOut
-
+			#chat-content-main , #chat-content-2
+				@extend %element-hidden
+			
 			#chat-section-2
-				@extend .container__visible
-				@extend .fadeIn
+				@extend %element-visible
