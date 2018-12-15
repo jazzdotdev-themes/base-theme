@@ -13,6 +13,8 @@
 .chat__button 
 	//Button that show and dissapear
 	@extend .animated
+	@extend .fadeInUp
+	
 	cursor: pointer
 	position: fixed
 	right: 1em
@@ -25,16 +27,3 @@
 	border-top-right-radius: 5%
 	border-bottom-left-radius: 40%
 	border-bottom-right-radius: 40%
-	
-	&:focus
-		@extend .animated
-		animation-delay: 0.8s
-		-webkit-animation-delay: 0.8s
-		animation-duration: 0.2s
-		-webkit-animation-duration: 0.2s
-		
-		+ .chat__main
-			@extend .animated
-			@extend .fadeInUp 
-			visibility: visible
-			display: block
