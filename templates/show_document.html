@@ -1,6 +1,6 @@
 {% extends "base-theme/layouts/base.html" %}
 
-{% block body %}
+{% block content %}
   <div class=" content-center flex mb-4 mt-4">
     <div class="content__body rounded bg-white shadow-lg w-full overflow-hidden">
       <div class="shadow-md bg-grey-lighter px-5 py-1">        
@@ -12,16 +12,8 @@
           <h3>Fields</h3>
           <div class="py-1 px-4 flex flex-wrap content-center align-middle flex-col">
             {% for key, value in fields %}
-            <div class="py-1 w-full flex flex-wrap flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
-              <label class="w-1/4 py-2 px-2 " for="{{key}}">
-                {{ key | safe | capitalize }}:
-              </label>               
-              <label class="w-3/4 py-2 px-2 rounded text-grey-darker leading-tight " for="{{key}}" id="{{key}}">
-                {{ value | safe }}                                    
-              </label>
-            </div>
-                                   
-              
+              <!-- Field of the document -->
+              {% include 'base-theme/chunks/show_document_field.html' %}
             {% endfor %}                      
           </div>
         </div>
@@ -39,36 +31,18 @@
                   </a>                                
                 </h4>                
                 <ul class="list__main">
+                
                   {% for entry in docs %}
                     <li>
+                      
                       {% set url = "/" ~ submodel ~ "/" ~ entry.uuid %}
                       {% if entry.name %}
-                        <h4 class="" >
-                          <a class="link__main text-black font-bold py-1 px-1 hover:text-blue" href="{{url}}">
-                            {{entry.name}}
-                          </a>
-                        </h4>
-                        <div class="flex flex-wrap flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-                          <span class="w-4/5 py-2 px-2 rounded text-grey-darker leading-tight">
-                            {{entry.store}} : {{entry.uuid}}
-                          </span>
-                          <div class="w-1/5">
-                            <a class="text-black text-sm link__main font-bold bg-blue rounded-full py-2 px-2 hover:bg-blue-dark hover:text-white " href="{{url}}"> 
-                              Show 
-                            </a>                                                       
-                          </div>
-                        </div>
+                        <!-- Subdocument has name -->
+                        {% include 'base-theme/chunks/show_document_sub_doc_1.html' %}
                       {% else %}
-                        <div class="flex flex-wrap flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-                          <span class="w-4/5 py-2 px-2 rounded text-grey-darker leading-tight">
-                            {{entry.store}} : {{entry.uuid}}
-                          </span>
-                          <div class="w-1/5">
-                            <a class="text-black text-sm link__main font-bold bg-blue rounded-full py-2 px-2 hover:bg-blue-dark hover:text-white " href="{{url}}"> 
-                              Show 
-                            </a>                                                       
-                          </div>
-                        </div>
+                        <!-- Subdocument doesn't have a name -->
+                        {% include 'base-theme/chunks/show_document_sub_doc_2.html' %}
+
                       {% endif %}
                     </li>
                   {% endfor %}
@@ -85,4 +59,4 @@
     </div>
   </div>
 
-{% endblock %}
+{% endblock content %}

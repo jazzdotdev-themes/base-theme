@@ -1,0 +1,8 @@
+<div class="py-1 w-full flex flex-wrap flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row ">
+  <label class="w-1/4 py-2 px-2 " for="{{key}}">
+    {{ key | safe | capitalize }}:
+  </label>
+  <label class="w-3/4 py-2 px-2 rounded text-grey-darker leading-tight " for="{{key}}" id="{{key}}">
+    {{ value | safe }}
+  </label>
+</div>
