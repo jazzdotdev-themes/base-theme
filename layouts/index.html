@@ -1,0 +1,26 @@
+{% extends "base-theme/layouts/base.html" %}
+
+{% block head %}
+  {% block title %}
+    {{ super() }}
+
+    {% if TITLE %}
+      {{ TITLE }}
+    {% else %}
+      {{ SITENAME }}
+    {% endif %}
+
+  {% endblock title %}
+  
+{% endblock head %}
+
+{% block content %}
+  {{ super() }}
+
+  {% block content %}  
+    <div id="page_content">
+
+    </div>
+  {% endblock %}
+
+{% endblock %}

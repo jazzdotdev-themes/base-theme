@@ -1,0 +1,50 @@
+{% extends "base-theme/layouts/base.html" %}
+
+{% block head %}
+
+  {% include 'base-theme/headers/meta.html' %}
+  {% include 'base-theme/headers/feeds.html' %}
+  {% include 'base-theme/headers/stylesheets.html' %}
+
+  {% block title %}
+    {{ super() }}
+
+    {% if TITLE %}
+      {{ TITLE }}
+    {% else %}
+      {{ SITENAME }}
+    {% endif %}
+
+  {% endblock title %}  
+
+  {% block style %}
+    {{ super() }}
+    {% include 'base-theme/headers/styles-basic.html' %}
+    {% include 'base-theme/headers/styles-studio.html' %}
+  {% endblock style %}
+
+{% endblock head %}
+
+{% block body %}
+  {{ super() }}
+
+  {% block navigation %}
+
+    <!-- Nav bar-->
+    {% include 'base-theme/chunks/nav.html' %}
+
+  {% endblock navigation%}  
+
+  {% block content %}
+    {{ super() }}
+
+
+  {% endblock content %}
+
+  {% block footer %}
+    <!-- footer -->
+    {% include 'base-theme/chunks/footer.html' %}
+
+  {% endblock footer%} 
+
+{% endblock body %}
