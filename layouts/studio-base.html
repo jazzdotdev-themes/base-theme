@@ -29,7 +29,7 @@
   {{ super() }}
 
   {% block navigation %}
-
+    {{ super() }}
     <!-- Nav bar-->
     {% include 'base-theme/chunks/nav.html' %}
 
@@ -42,6 +42,8 @@
   {% endblock content %}
 
   {% block footer %}
+    {{ super() }}
+
     <!-- footer -->
     {% include 'base-theme/chunks/footer.html' %}
 
