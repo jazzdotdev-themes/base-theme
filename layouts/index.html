@@ -1,26 +1,25 @@
 {% extends "layouts/base.html" %}
+<!-- grand parent -->
+
 
 {% block head %}
-  {% block title %}
-    {{ super() }}
 
-    {% if TITLE %}
-      {{ TITLE }}
-    {% else %}
-      {{ SITENAME }}
-    {% endif %}
-
-  {% endblock title %}
-  
 {% endblock head %}
 
-{% block body %}
+{% block title %}
+
+  {% if TITLE %}
+    {{ TITLE }}
+  {% else %}
+    {{ SITENAME }}
+  {% endif %}
+
+{% endblock title %}
+  
+
+{% block content %}  
   {{ super() }}
-
-  {% block content %}  
-    <div id="page_content">
-
-    </div>
-  {% endblock %}
-
-{% endblock %}
+  <div id="page_content">
+    
+  </div>
+{% endblock content %}

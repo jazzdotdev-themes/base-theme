@@ -5,48 +5,46 @@
   {% include  'headers/meta.html' %}
   {% include  'headers/feeds.html' %}
   {% include  'headers/stylesheets.html' %}
-
-  {% block title %}
-    {{ super() }}
-
-    {% if TITLE %}
-      {{ TITLE }}
-    {% else %}
-      {{ SITENAME }}
-    {% endif %}
-
-  {% endblock title %}  
-
-  {% block style %}
-    {{ super() }}
-    {% include  'headers/styles-basic.html' %}
-    {% include  'headers/styles-studio.html' %}
-  {% endblock style %}
-
+  
 {% endblock head %}
 
-{% block body %}
+{% block title %}
   {{ super() }}
 
-  {% block navigation %}
-    {{ super() }}
-    <!-- Nav bar-->
-    {% include  'chunks/nav.html' %}
+  {% if TITLE %}
+    {{ TITLE }}
+  {% else %}
+    {{ SITENAME }}
+  {% endif %}
 
-  {% endblock navigation %}  
+{% endblock title %}  
 
-  {% block content %}
-    {{ super() }}
+{% block style %}
+  {{ super() }}
+  {% include  'headers/styles-basic.html' %}
+  {% include  'headers/styles-studio.html' %}
+{% endblock style %}
 
 
-  {% endblock content %}
+{% block navigation %}
+  {{ super() }}
+  <!-- Nav bar-->
+  {% include  'chunks/nav.html' %}
 
-  {% block footer %}
-    {{ super() }}
+{% endblock navigation %}  
 
-    <!-- footer -->
-    {% include  'chunks/footer.html' %}
+{% block content %}
+  {{ super() }}
 
-  {% endblock footer %} 
 
-{% endblock body %}
+{% endblock content %}
+
+{% block footer %}
+  {{ super() }}
+
+  <!-- footer -->
+  {% include  'chunks/footer.html' %}
+
+{% endblock footer %} 
+
+

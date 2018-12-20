@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html>
+  <!-- grand grand parent -->
   <head>
     {% block head %}      
-
-      <title>
-        {% block title %}
-          <!-- Title -->
-        {% endblock  %}
-      </title>
+    
+    {% endblock head %}
+    <title>
+      {% block title %}
+      
+      {% endblock title %}
+    </title>
     
       
       {% block style %}
         <!-- Style tags css inside the html -->
         <style>
         </style>        
-      {% endblock  %}
+      {% endblock style %}
       
-    {% endblock  %}
-  </head>
-  <body>
-    {% block body %}
+    </head>
+    <body>     
       <div id="page">
 
         <div id="header">
           {% block header %}
             <!-- Header -->
-          {% endblock  %}  
+          {% endblock header %}  
         </div>
 
         <div id="navigation">
           {% block navigation %}
             <!-- Nav bar -->
-          {% endblock  %}          
+          {% endblock navigation %}          
         </div>
 
         <div id="content">
           {% block content %}
-            <!-- Content of any page -->        
-          {% endblock  %}
+            <!-- Content of any page -->     
+
+          {% endblock content %}
         </div>
         
         <div id="footer">
           {% block footer %}
             <!-- footer -->
-          {% endblock  %}    
+          {% endblock footer %}    
         </div>
         
       </div>
-    </body>  
-  {% endblock  %}
+  </body>  
 
 </html>

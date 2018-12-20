@@ -1,9 +1,10 @@
 {% extends "layouts/index-studio.html" %}
 
-{% block content %}
-  
-  {% include  'templates/slider.html' %}  
-  
-  {{ super() }}    
+{% import "templates/slider.html" as slider %}
 
+{% block content %}
+  {{ super() }}       
+
+  {% include 'chunks/foundpatterns-slide.html' %}
+  
 {% endblock content %}
