@@ -1,10 +1,10 @@
-{% extends "base-theme/layouts/base.html" %}
+{% extends "layouts/base.html" %}
 
 {% block head %}
 
-  {% include 'base-theme/headers/meta.html' %}
-  {% include 'base-theme/headers/feeds.html' %}
-  {% include 'base-theme/headers/stylesheets.html' %}
+  {% include  'headers/meta.html' %}
+  {% include  'headers/feeds.html' %}
+  {% include  'headers/stylesheets.html' %}
 
   {% block title %}
     {{ super() }}
@@ -19,8 +19,8 @@
 
   {% block style %}
     {{ super() }}
-    {% include 'base-theme/headers/styles-basic.html' %}
-    {% include 'base-theme/headers/styles-studio.html' %}
+    {% include  'headers/styles-basic.html' %}
+    {% include  'headers/styles-studio.html' %}
   {% endblock style %}
 
 {% endblock head %}
@@ -31,7 +31,7 @@
   {% block navigation %}
     {{ super() }}
     <!-- Nav bar-->
-    {% include 'base-theme/chunks/nav.html' %}
+    {% include  'chunks/nav.html' %}
 
   {% endblock navigation %}  
 
@@ -45,7 +45,7 @@
     {{ super() }}
 
     <!-- footer -->
-    {% include 'base-theme/chunks/footer.html' %}
+    {% include  'chunks/footer.html' %}
 
   {% endblock footer %} 
 
