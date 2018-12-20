@@ -3,11 +3,13 @@
 
 
 {% block head %}
+  {{ super() }}
 
 {% endblock head %}
 
 {% block title %}
-
+  {{ super() }}
+  
   {% if TITLE %}
     {{ TITLE }}
   {% else %}
