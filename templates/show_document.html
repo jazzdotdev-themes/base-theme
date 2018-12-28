@@ -15,7 +15,7 @@
           <div class="py-1 px-4 flex flex-wrap content-center align-middle flex-col">
             {% for key, value in fields %}
               <!-- Field of the document -->
-              {% include  'chunks/show_document_field.html' %}
+              {% include  "chunks/show_document_field.html" %}
             {% endfor %}                      
           </div>
         </div>
@@ -40,10 +40,10 @@
                       {% set url = "/" ~ submodel ~ "/" ~ entry.uuid %}
                       {% if entry.name %}
                         <!-- Subdocument has name -->
-                        {% include  'chunks/show_document_sub_doc_1.html' %}
+                        {% include  "chunks/show_document_sub_doc_1.html" %}
                       {% else %}
                         <!-- Subdocument doesn't have a name -->
-                        {% include  'chunks/show_document_sub_doc_2.html' %}
+                        {% include  "chunks/show_document_sub_doc_2.html" %}
 
                       {% endif %}
                     </li>

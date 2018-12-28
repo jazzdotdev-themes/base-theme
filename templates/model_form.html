@@ -24,14 +24,14 @@
                 {% if fields %}
                   {% for key, value in fields %}
                     <!-- Edit fields -->
-                    {% include  'chunks/model_form_field_1.html' %}
+                    {% include  "chunks/model_form_field_1.html" %}
 
                   {% endfor %}
                 {% else %}                                             
                   {% for name, field_def in model.fields %}  
                   
                     <!-- Creation mode model fields used -->
-                    {% include  'chunks/model_form_field_2.html' %}
+                    {% include  "chunks/model_form_field_2.html" %}
                                  
                   {% endfor %}                
                 
