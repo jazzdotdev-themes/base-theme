@@ -1,0 +1,36 @@
+<div class=" content-center flex mb-4 mt-4">
+  <div class="content__body rounded bg-white shadow-lg w-full overflow-hidden">
+    <div class="shadow-md bg-grey-lighter px-5 py-1 flex flex-wrap justify-between">
+      <!-- Title  -->
+      {% include "chunks/list_document/list_documents_title.html" %}
+
+      <div class="mt-3 inline-block">
+        <a class="link__main text-black font-bold bg-green rounded-full py-2 px-4 hover:bg-green-dark hover:text-white"
+          href="/{{model}}/new">New {{ model | capitalize }}</a>
+      </div>
+    </div>
+    {% if documents %}
+    <ul class="list__main">
+      {% for entry in documents %}
+      <li class="list__border px-1">
+
+        {% set url = "/" ~ model ~ "/" ~ entry.uuid %}
+        <!-- Elements of the list -->
+        {% include "chunks/list_document/list_documents_el.html" %}
+
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <h2>
+      No documents
+    </h2>
+    {% endif %}
+
+    <div class="px-2 py-2 text-center">
+      <a class="link__main inline-block text-black font-bold bg-green rounded-full py-2 px-4 hover:bg-green-dark hover:text-white"
+        href="/{{model}}/new">New {{ model | capitalize }}</a>
+    </div>
+
+  </div>
+</div>
