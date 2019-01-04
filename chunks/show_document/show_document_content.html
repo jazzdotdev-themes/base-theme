@@ -1,20 +1,20 @@
-<div class=" content-center flex mb-4 mt-4">
-  <div class="content__body rounded bg-white shadow-lg w-full overflow-hidden">
-    <div class="shadow-md bg-grey-lighter px-5 py-1">
+<div big_container>
+  <div card_container>
+    <div card_header>
       <h1 class="">{{ TITLE }}</h1>
       <strong>Store:</strong> {{ store }} <br>
     </div>
-    <div class="text-justify">
-      <div class=" border-black px-5 py-2 shadow-inner">
+    <div justify_container>
+      <div fields_container >
         <h3>Fields</h3>
-        <div class="py-1 px-4 flex flex-wrap content-center align-middle flex-col">
+        <div field_group >
           {% for key, value in fields %}
           <!-- Field of the document -->
           {% include "chunks/show_document/show_document_field.html" %}
           {% endfor %}
         </div>
       </div>
-      <div class="">
+      <div >
         <h3 class="body__title px-5 py-1">Body</h3>
         <div id="content" class="container px-5 py-1">
           <pre>{{ body | safe }}</pre>
