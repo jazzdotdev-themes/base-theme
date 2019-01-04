@@ -1,0 +1,61 @@
+<div big_container>
+  <div card_container>
+    <div card_header>
+      <h1 class="">{{ TITLE }}</h1>
+      <strong>Store:</strong> {{ store }} <br>
+    </div>
+    <div justify_container>
+      <div fields_container >
+        <h3>Fields</h3>
+        <div field_group >
+          {% for key, value in fields %}
+          <!-- Field of the document -->
+          {% include "chunks/show_document/show_document_field.html" %}
+          {% endfor %}
+        </div>
+      </div>
+      <div >
+        <h3 body_title>Body</h3>
+        <div body_container id="content" >
+          <pre>{{ body | safe }}</pre>
+        </div>
+
+        {% if subdocuments %}
+        <div class="px-5 py-2">
+          <h3>Subdocuments</h3>
+          {% for submodel, docs in subdocuments %}
+          <h4 class="">
+            <a subdocument_title href="/{{model}}/{{id}}/{{submodel}}">
+              {{ submodel | capitalize }}
+            </a>
+          </h4>
+          <ul list>
+
+            {% for entry in docs %}
+            <li>
+
+              {% set url = "/" ~ submodel ~ "/" ~ entry.uuid %}
+              {% if entry.name %}
+              <!-- Subdocument has name -->
+              {% include "chunks/show_document/sub_document_1.html" %}
+              {% else %}
+              <!-- Subdocument doesn't have a name -->
+              {% include "chunks/show_document/sub_document_2.html" %}
+
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div centered_container >
+        <a blue_button 
+          href="/?witness={{ id }}">Witness</a>
+        <a yellow_button
+          href="/{{model}}/{{id}}/edit">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>
