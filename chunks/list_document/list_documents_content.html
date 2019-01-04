@@ -1,18 +1,18 @@
-<div * id="big_container">
-  <div id="card_container" >
-    <div id="card_header" >
+<div big_container >
+  <div card_container>
+    <div card_header>
       <!-- Title  -->
       {% include "chunks/list_document/list_documents_title.html" %}
 
-      <div id="inline_aligner" >
-        <a id="green_button"
+      <div inline_aligner>
+        <a green_button
           href="/{{model}}/new">New {{ model | capitalize }}</a>
       </div>
     </div>
     {% if documents %}
-    <ul id="list" >
+    <ul list >
       {% for entry in documents %}
-      <li id="list_border" >
+      <li list_border >
 
         {% set url = "/" ~ model ~ "/" ~ entry.uuid %}
         <!-- Elements of the list -->
@@ -27,8 +27,8 @@
     </h2>
     {% endif %}
 
-    <div id="center_container" >
-      <a id="green_button"
+    <div center_container >
+      <a green_button
         href="/{{model}}/new">New {{ model | capitalize }}</a>
     </div>
 

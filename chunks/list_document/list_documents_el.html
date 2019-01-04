@@ -1,20 +1,20 @@
-<div class="flex flex-col px-2 py-2">
-  <div class="flex flex-row">
-    <p class="pr-2">
+<div col_container>
+  <div row_container >
+    <p padding >
       Store
-      <p class="font-bold pr-1">
+      <p bold_font>
         {{entry.store}} :
       </p>
     </p>
   </div>
-  <div class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row">
-    <div class="w-4/5">
+  <div responsive_display>
+    <div width_md>
       <h3>
         {{entry.uuid}}
       </h3>
     </div>
-    <div class="w-1/5">
-      <a class=" ml-5 inline-block text-black link__main font-bold bg-blue rounded-full py-2 px-4 hover:bg-blue-dark hover:text-white"
+    <div width_sm>
+      <a blue_button
         href="{{url}}">
         Show
       </a>
