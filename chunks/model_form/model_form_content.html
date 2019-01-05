@@ -1,0 +1,63 @@
+<div big_container>
+  <div card_container>
+    <form method="POST" action="/">
+      <div edit_header >
+        <h1>{{ TITLE }}</h1>
+        {% if store %}
+        <strong>Store:</strong> {{ store | safe }} <br>
+        {% endif %}
+      </div>
+      <div>
+        <div shadow_container>
+          <div class=" ">
+            <h3>Fields</h3>
+            <input type="hidden" name="model" value="{{model_name}}">
+            {% if id %}
+            <input type="hidden" name="id" value="{{id}}">
+            {% endif %}
+            <div edit_field_container >
+              {% if fields %}
+              {% for key, value in fields %}
+              <!-- Edit fields -->
+              {% include "chunks/model_form/model_form_field_1.html" %}
+
+              {% endfor %}
+              {% else %}
+              {% for name, field_def in model.fields %}
+
+              <!-- Creation mode model fields used -->
+              {% include "chunks/model_form/model_form_field_2.html" %}
+
+              {% endfor %}
+
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+        {% if fields or body %}
+        <div width_xl >
+
+          <h3 body_title >Body</h3>
+
+          <div padding_x_y>
+            <textarea text_style
+              type="string" name="fields.body" id="body">
+                {% if body %} 
+                  {{ body | safe }} 
+                {% endif %}      
+                </textarea>
+          </div>
+        </div>
+        {% endif %}
+
+        <div padding_centered >
+          <button green_button 
+            type="submit">Create {{ model_name | safe }}</button>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</div>
