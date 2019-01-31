@@ -1,31 +1,9 @@
 <div big_container >
   <div card_container>
-    <div card_header>
-      <!-- Title  -->
-      {% include "chunks/list_document/list_documents_title.html" %}
-
-      <div inline_aligner>
-        <a green_button
-          href="/{{model}}/new">New {{ model | capitalize }}</a>
-      </div>
-    </div>
-    {% if documents %}
-    <ul list >
-      {% for entry in documents %}
-      <li list_border >
-
-        {% set url = "/" ~ model ~ "/" ~ entry.uuid %}
-        <!-- Elements of the list -->
-        {% include "chunks/list_document/list_documents_el.html" %}
-
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-    <h2>
-      No documents
-    </h2>
-    {% endif %}
+    {% include "chunks/list_document/header.html" %}
+       
+    {% include "chunks/list_document/documents.html" %}
+    
 
     <div center_container >
       <a green_button
