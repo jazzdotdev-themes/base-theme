@@ -7,11 +7,10 @@
     <div justify_container>
       <div fields_container >
         <h3>Fields</h3>
-        <div field_group >
-          {% for key, value in fields %}
-          <!-- Field of the document -->
+        <div field_group >          
+          <!-- Fields of the documents -->
           {% include "chunks/show_document/show_document_field.html" %}
-          {% endfor %}
+         
         </div>
       </div>
       <div >
@@ -19,36 +18,10 @@
         <div body_container id="content" >
           <pre>{{ body | safe }}</pre>
         </div>
+          
+        {% include "chunks/show_document/sub_documents.html" %}
 
-        {% if subdocuments %}
-        <div class="px-5 py-2">
-          <h3>Subdocuments</h3>
-          {% for submodel, docs in subdocuments %}
-          <h4 class="">
-            <a subdocument_title href="/{{model}}/{{id}}/{{submodel}}">
-              {{ submodel | capitalize }}
-            </a>
-          </h4>
-          <ul list>
-
-            {% for entry in docs %}
-            <li>
-
-              {% set url = "/" ~ submodel ~ "/" ~ entry.uuid %}
-              {% if entry.name %}
-              <!-- Subdocument has name -->
-              {% include "chunks/show_document/sub_document_1.html" %}
-              {% else %}
-              <!-- Subdocument doesn't have a name -->
-              {% include "chunks/show_document/sub_document_2.html" %}
-
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-          {% endfor %}
-        </div>
-        {% endif %}
+        
       </div>
       <div centered_container >
         <a blue_button 

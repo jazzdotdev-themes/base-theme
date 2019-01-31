@@ -1,0 +1,30 @@
+{% if subdocuments %}
+  <div sub_doc_cont >
+    <h3>Subdocuments</h3>
+    {% for submodel, docs in subdocuments %}
+    <h4 >
+      <a subdocument_title href="/{{submodel}}">
+        {{ submodel | capitalize }}
+      </a>
+    </h4>
+    <ul list>
+
+      {% for entry in docs %}
+      <li>
+
+        {% set url = "/" ~ submodel ~ "/" ~ entry.uuid %}
+        {% if entry.name %}
+          <!-- Subdocument has name -->
+          {% include "chunks/show_document/sub_document_name.html" %}
+          {% include "chunks/show_document/sub_document_data.html" %}
+
+        {% else %}
+          <!-- Subdocument doesn't have a name -->
+          {% include "chunks/show_document/sub_document_data.html" %}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+{% endif %}
