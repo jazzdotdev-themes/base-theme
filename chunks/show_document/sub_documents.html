@@ -13,17 +13,17 @@
         <li>
 
           {% set url = "/" ~ submodel ~ "/" ~ entry.uuid %}
-          {% if entry.name %}
-            <!-- Subdocument has name -->
-            <h4 >
-              <a document_title href="{{url}}">
-                {{entry.name}}
-              </a>
-            </h4>
+          {% if entry.name %}         
+            <!-- For some reason the variable where losing context here if they were to be sent
+            to another chunks but reasigning the variable stops this , doing this also helps to 
+          understand the context of the component-->
+            {% set name= entry.name %}        
+            {% set store= entry.store %}        
+            {% set uuid= entry.uuid %}        
             
             <!-- Broken, entry does not pass through -->
-            {#% include "chunks/show_document/sub_document_name.html" %#}
-            {#% include "chunks/show_document/sub_document_data.html" %#}
+            {% include "chunks/show_document/sub_document_name.html" %}
+            {% include "chunks/show_document/sub_document_data.html" %}
 
           {% else %}
             <!-- Subdocument doesn't have a name -->
