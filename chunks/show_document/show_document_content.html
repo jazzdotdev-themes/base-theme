@@ -14,10 +14,10 @@
         </div>
       </div>
       <div >
-        <h3 body_title>Body</h3>
-        <div body_container id="content" >
-          <pre>{{ body | safe }}</pre>
-        </div>
+
+        
+        {% include "chunks/show_document/show_document_body.html" %}
+
           
         {% include "chunks/show_document/sub_documents.html" %}
 

@@ -1,11 +1,15 @@
-{% if fields or body %}
+{% if fields.body or body %}
   <div width_xl>
-    <h3 body_title>Body</h3>
+    <label for="body">
+      <h3 body_title>Body</h3>    
+    </label>
 
-    <div padding_x_y>
+    <div padding_x_y >
       <textarea text_style type="string" name="fields.body" id="body">
         {% if body %} 
-          {{ body | safe }} 
+          {{ body | safe }}
+        {% elif fields.body %}
+          {{ fields.body | safe }}
         {% endif %}      
       </textarea>
     </div>

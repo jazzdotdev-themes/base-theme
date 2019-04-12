@@ -1,0 +1,5 @@
+container
+px-5
+py-1
+rounded
+text-grey-darker
