@@ -5,13 +5,7 @@
     </label>
 
     <div padding_x_y >
-      <textarea text_style type="string" name="fields.body" id="body">
-        {% if body %} 
-          {{ body | safe }}
-        {% elif fields.body %}
-          {{ fields.body | safe }}
-        {% endif %}      
-      </textarea>
+      <textarea text_style type="string" name="fields.body" id="body">{% if body %}{{ body | safe }}{% elif fields.body %}{{ fields.body | safe }}{% endif %}</textarea>
     </div>
   </div>
 {% endif %}

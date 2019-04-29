@@ -1,13 +1,7 @@
 {% if fields.body or body %}  
   <h3 body_title>Body</h3>
   <div body_container id="content" >
-    <pre>
-      {% if body %} 
-        {{ body | safe }}
-      {% elif fields.body %}
-        {{ fields.body | safe }}
-      {% endif %} 
-    </pre>
+    <pre>{% if body %}{{ body | safe }}{% elif fields.body %}{{ fields.body | safe }}{% endif %}</pre>
   </div>
 
 
