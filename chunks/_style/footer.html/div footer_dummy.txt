@@ -1,3 +1,5 @@
 p-2
 mt-0
 w-full
+border-2
+text-center

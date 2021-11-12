@@ -1,2 +1,4 @@
 w-full
 text-center
+border
+

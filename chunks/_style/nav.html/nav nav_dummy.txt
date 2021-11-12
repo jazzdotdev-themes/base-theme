@@ -3,3 +3,5 @@ mt-0
 w-full
 flex
 inline-flex
+border
+
